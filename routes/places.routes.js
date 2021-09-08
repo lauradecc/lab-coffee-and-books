@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Place = require('./../models/Place.model')
+const API_KEY = process.env.API_KEY
 
 
 // Places list
@@ -80,7 +81,7 @@ router.post('/:id/delete', (req, res) => {
 
 
 // Places map
-router.get('/map', (req, res) => res.render('places/places-map'))
+router.get('/map', (req, res) => res.render('places/places-map', { API_KEY }))
 
 
 module.exports = router;

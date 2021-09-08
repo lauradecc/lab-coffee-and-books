@@ -29,6 +29,5 @@ function printPlaces(places, map) {
             lng: elm.location.coordinates[1]
         }
         new google.maps.Marker({ map, position, title: elm.name })
-        console.log(elm.name)
     })
 }
