@@ -1,0 +1,14 @@
+<ul>
+    {{#each places}}
+        <li>
+            {{name}}
+            <small>
+                -
+                <a href="/places/{{id}}/edit">[Editar]</a>
+                <form action="/places/{{id}}/delete" method="POST">
+                    <button type="submit" class="btn btn-danger btn-sm mt-2 mb-4">Delete</button>
+                </form>
+            </small>
+        </li>
+    {{/each}}
+</ul>
